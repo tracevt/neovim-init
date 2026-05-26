@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    lazy = false,
     opts = require "configs.conform",
   },
 
@@ -13,16 +13,28 @@ return {
     end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    opts = {
+      ensure_installed = {
+        "lua",
+        "vim",
+        "vimdoc",
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "rust",
+        "ruby",
+        "python",
+        "html",
+        "css",
+      },
+    },
+  },
 }
