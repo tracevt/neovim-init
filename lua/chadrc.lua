@@ -14,11 +14,12 @@ M.base46 = {
 	-- },
 }
 
+M.ui = {
+  statusline = {
+    enabled = false,
+  },
+}
+
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
 
 return M

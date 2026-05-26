@@ -1,11 +1,27 @@
 return {
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      flavour = "macchiato",
+    },
+  },
+
+  {
     "stevearc/conform.nvim",
     lazy = false,
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "nvim-lualine/lualine.nvim",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = require "configs.lualine",
+  },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
